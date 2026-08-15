@@ -71,7 +71,20 @@ with the full DeepSeek V4 Pro official endpoint.
 
 ### Install
 
-Copy `index.ts` into one of pi's extension roots:
+Preferred (npm):
+
+```bash
+pi install npm:pi-deepseek-anchor
+pi -e npm:pi-deepseek-anchor   # try it without installing
+```
+
+From this repository:
+
+```bash
+pi install git:github.com/kxh4892636/pi-deepseek-anchor@v1.0.0
+```
+
+Or copy `index.ts` into one of pi's extension roots manually:
 
 ```text
 ~/.pi/agent/extensions/anchored-standard/index.ts      # global
@@ -120,6 +133,7 @@ type-definition locations.
 
 ### Files
 
+- `package.json` — pi package manifest (`pi.extensions`, `pi-package` keyword)
 - `index.ts` — the pi extension (single file, zero runtime deps)
 - `tsconfig.check.json` — type-check config
 - `LICENSE` — MIT, including upstream copyright notices
@@ -184,7 +198,20 @@ REQ#2: 完整 26 工具目录 + 常规 pi 上下文（以 user message 注入）
 
 ### 安装
 
-把 `index.ts` 复制到 pi 的扩展目录之一：
+推荐（npm）：
+
+```bash
+pi install npm:pi-deepseek-anchor
+pi -e npm:pi-deepseek-anchor   # 临时试用，不写入配置
+```
+
+从本仓库安装：
+
+```bash
+pi install git:github.com/kxh4892636/pi-deepseek-anchor@v1.0.0
+```
+
+或手动把 `index.ts` 复制到 pi 的扩展目录之一：
 
 ```text
 ~/.pi/agent/extensions/anchored-standard/index.ts      # 全局
@@ -229,6 +256,7 @@ npx tsc -p tsconfig.check.json
 
 ### 文件
 
+- `package.json` — pi 包 manifest（`pi.extensions`、`pi-package` keyword）
 - `index.ts` — pi 扩展本体（单文件、零运行时依赖）
 - `tsconfig.check.json` — 类型检查配置
 - `LICENSE` — MIT（保留上游版权声明）

@@ -1,0 +1,42 @@
+{
+  "name": "pi-deepseek-anchor",
+  "version": "1.0.0",
+  "description": "pi extension: DeepSeek V4 Pro Minimal-anchored bootstrap, then full Standard tools (port of dsh-anchored-standard)",
+  "type": "module",
+  "main": "index.ts",
+  "license": "MIT",
+  "keywords": [
+    "pi",
+    "pi-coding-agent",
+    "pi-package",
+    "pi-extension",
+    "deepseek",
+    "deepseek-v4-pro",
+    "anchored-standard"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kxh4892636/pi-deepseek-anchor.git"
+  },
+  "homepage": "https://github.com/kxh4892636/pi-deepseek-anchor#readme",
+  "bugs": {
+    "url": "https://github.com/kxh4892636/pi-deepseek-anchor/issues"
+  },
+  "files": [
+    "index.ts",
+    "NOTICE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-ai": "*",
+    "typebox": "*"
+  }
+}
