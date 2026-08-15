@@ -2,9 +2,9 @@
 
 > 中文说明：[README.zh-CN.md](./README.zh-CN.md)
 
-pi-deepseek-anchor enables the full-powered DeepSeek V4 Pro to run at full strength in pi, with significantly improved results (Project2: 91–92 → 98–99). It locks request #1 to the official Minimal tool pair and persona, and automatically restores the full pi tool catalog from request #2 onward.
+pi-deepseek-anchor enables the full-powered DeepSeek V4 Pro to run at full strength in pi, with significantly improved results (Project2: 91–92 → 98–99).
 
-**Problem.** DeepSeek V4 Pro selects its trajectory based on the API-visible tool catalog. With the default full catalog, the first response typically starts with "Let me..." and follows the Standard trajectory (Project2: 91–92). With the official Minimal pair (`bash` + `str_replace_editor`), the first response starts with "We need..." and produces zero `let me` (Project2: 98–99). Staying on Minimal permanently loses the full toolset. This extension applies Minimal only to request #1 and restores the full catalog from request #2, so both are retained in one session.
+**Cause** DeepSeek V4 Pro selects its trajectory based on the API-visible tool catalog. With the default full catalog, the first response typically starts with "Let me..." and follows the Standard trajectory (Project2: 91–92). With the official Minimal pair (`bash` + `str_replace_editor`), the first response starts with "We need..." and produces zero `let me` (Project2: 98–99). Staying on Minimal permanently loses the full toolset. This extension applies Minimal only to request #1 and restores the full catalog from request #2, so both are retained in one session.
 
 ## Install
 
@@ -50,7 +50,7 @@ End-to-end with official `deepseek-v4-pro`, `reasoningEffort=max`, `--mode rpc`:
 REQ#1: tools=[bash, str_replace_editor]
        system='You are a helpful software engineer assistant.' (46 chars)
        first thinking: "We need answer briefly about repository. Need inspect. Use tools."
-REQ#2: full 26-tool catalog + normal pi context (delivered as a user message)
+REQ#2: full tool catalog + normal pi context (delivered as a user message)
 ```
 
 ## Configuration

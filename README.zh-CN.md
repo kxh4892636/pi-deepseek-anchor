@@ -2,9 +2,9 @@
 
 > English: [README.md](./README.md)
 
-pi-deepseek-anchor 让满血 DeepSeek V4 Pro 在 pi 中以完整能力运行，效果大幅提升（Project2：91–92 → 98–99）。请求 #1 使用官方 Minimal 工具对与 persona，请求 #2 起自动恢复 pi 完整工具目录。
+pi-deepseek-anchor 让满血 DeepSeek V4 Pro 在 pi 中以完整能力运行，效果大幅提升（Project2：91–92 → 98–99）。
 
-**问题。** DeepSeek V4 Pro 会根据 API 可见的工具目录选择执行轨迹。使用默认全量目录时，首个回复通常以 "Let me..." 开头并进入 Standard 轨迹（Project2：91–92）；使用官方 Minimal 工具对（`bash` + `str_replace_editor`）时，首个回复以 "We need..." 开头、`let me` 为零（Project2：98–99）。但全程停留在 Minimal 会失去完整工具集。本扩展只在请求 #1 应用 Minimal，请求 #2 起恢复全量目录，两者在一个会话中兼得。
+**原因** DeepSeek V4 Pro 会根据 API 可见的工具目录选择执行轨迹。使用默认全量目录时，首个回复通常以 "Let me..." 开头并进入 Standard 轨迹（Project2：91–92）；使用官方 Minimal 工具对（`bash` + `str_replace_editor`）时，首个回复以 "We need..." 开头、`let me` 为零（Project2：98–99）。但全程停留在 Minimal 会失去完整工具集。本扩展只在请求 #1 应用 Minimal，请求 #2 起恢复全量目录，两者在一个会话中兼得。
 
 ## 安装
 
@@ -50,7 +50,7 @@ pi install git:github.com/kxh4892636/pi-deepseek-anchor@v1.0.0
 REQ#1: tools=[bash, str_replace_editor]
        system='You are a helpful software engineer assistant.' (46 字符)
        首段思维链: "We need answer briefly about repository. Need inspect. Use tools."
-REQ#2: 完整 26 工具目录 + 常规 pi 上下文（以 user message 注入）
+REQ#2: 完整工具目录 + 常规 pi 上下文（以 user message 注入）
 ```
 
 ## 配置
