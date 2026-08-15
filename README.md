@@ -2,7 +2,7 @@
 
 > 中文说明：[README.zh-CN.md](./README.zh-CN.md)
 
-pi-deepseek-anchor keeps DeepSeek V4 Pro on the Minimal-anchored trajectory in pi: request #1 uses the official Minimal tool pair and persona, and request #2 onward automatically restores the full pi tool catalog.
+pi-deepseek-anchor enables the full-powered DeepSeek V4 Pro to run at full strength in pi, with significantly improved results (Project2: 91–92 → 98–99). It locks request #1 to the official Minimal tool pair and persona, and automatically restores the full pi tool catalog from request #2 onward.
 
 **Problem.** DeepSeek V4 Pro selects its trajectory based on the API-visible tool catalog. With the default full catalog, the first response typically starts with "Let me..." and follows the Standard trajectory (Project2: 91–92). With the official Minimal pair (`bash` + `str_replace_editor`), the first response starts with "We need..." and produces zero `let me` (Project2: 98–99). Staying on Minimal permanently loses the full toolset. This extension applies Minimal only to request #1 and restores the full catalog from request #2, so both are retained in one session.
 
