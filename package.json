@@ -24,7 +24,8 @@
   },
   "files": [
     "index.ts",
-    "NOTICE"
+    "NOTICE",
+    "README.zh-CN.md"
   ],
   "publishConfig": {
     "access": "public"
